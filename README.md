@@ -1,48 +1,139 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-bouncer
 
-# n8n-nodes-starter
+[![npm version](https://img.shields.io/npm/v/n8n-nodes-bouncer.svg)](https://www.npmjs.com/package/n8n-nodes-bouncer)
+[![n8n community node](https://img.shields.io/badge/n8n-community%20node-orange)](https://n8n.io/)
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+A custom n8n node for integrating with the [NeverBounce](https://neverbounce.com/) email verification API (or your own API).  
+Easily verify emails and automate your workflows with n8n!
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+---
 
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+## Features
 
-## Prerequisites
+- **Email Verification:** Instantly verify email addresses using the NeverBounce API.
+- **Easy Integration:** Plug-and-play with your n8n instance.
+- **Customizable:** Supports additional fields and flexible API routing.
+- **Open Source:** MIT licensed.
 
-You need the following installed on your development machine:
+---
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+## Installation
 
-## Using this starter
+### 1. Install in your n8n instance
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+```bash
+npm install n8n-nodes-bouncer
+```
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+Or, if you use a custom nodes folder:
 
-## More information
+```bash
+cd ~/.n8n/custom
+npm install n8n-nodes-bouncer
+```
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+### 2. Restart n8n
+
+```bash
+n8n stop
+n8n start
+```
+or just restart your n8n process/service.
+
+---
+
+## Usage
+
+1. **Open n8n Editor.**
+2. **Add the "The Never Bounce" node** to your workflow.
+3. **Configure your API credentials** (see below).
+4. **Set the email address** you want to verify.
+5. **Run the workflow** to verify emails automatically!
+
+---
+
+## Credentials
+
+This node requires an API key for the NeverBounce API (or your own API).  
+Set up your credentials in n8n under **Credentials** > **BouncerApi**.
+
+---
+
+## Example Workflow
+
+```json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "email": "test@example.com"
+      },
+      "name": "Bouncer",
+      "type": "n8n-nodes-bouncer",
+      "typeVersion": 1,
+      "position": [450, 300]
+    }
+  ]
+}
+```
+
+---
+
+## Node Properties
+
+| Property   | Type   | Description                       |
+|------------|--------|-----------------------------------|
+| email      | string | The email address to verify       |
+<!-- | ...        | ...    | Add your other fields here        | -->
+
+---
+
+## Development
+
+### Build
+
+```bash
+npm run build
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+### Test
+
+```bash
+npm test
+```
+
+---
+
+## Contributing
+
+Pull requests are welcome!  
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
 
 ## License
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+[MIT](LICENSE)
+
+---
+
+## Author
+
+- [Neehal Ahmed Qureshi](https://github.com/NeehalAhmedQureshi)
+- [Your Website or Contact Info]
+
+---
+
+## Support
+
+If you have any questions or issues, please open an [issue](https://github.com/NeehalAhmedQureshi/n8n-nodes-bouncer/issues) on GitHub.
+
+---
+
+**Happy automating! 🚀**
