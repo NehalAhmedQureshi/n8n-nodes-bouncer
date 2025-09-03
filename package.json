@@ -33,10 +33,10 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/TheNeverBounceApi.credentials.js"
+			"dist/credentials/BouncerApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/TheNeverBounce/TheNeverBounce.node.js"
+			"dist/nodes/Bouncer/Bouncer.node.js"
 		]
 	},
 	"devDependencies": {
