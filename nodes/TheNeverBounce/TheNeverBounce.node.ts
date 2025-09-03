@@ -1,23 +1,23 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
-export class TheNeverBounce implements INodeType {
+export class Bouncer implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
-		displayName: 'The Never Bounce',
-		name: 'theNeverBounce',
+		displayName: 'Bouncer',
+		name: 'bouncer',
 		// icon: 'file:theneverbounce.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Get data from bouncers API',
 		defaults: {
-			name: 'The Never Bounce',
+			name: 'Bouncer',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'theNeverBounceApi',
+				name: 'bouncerApi',
 				required: true,
 			},
 		],

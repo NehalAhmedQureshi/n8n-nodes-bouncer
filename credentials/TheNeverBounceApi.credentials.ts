@@ -4,9 +4,9 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class TheNeverBounceApi implements ICredentialType {
-	name = 'theNeverBounceApi';
-displayName = 'NeverBounce API';
+export class BouncerApi implements ICredentialType {
+	name = 'bouncerApi';
+displayName = 'Bouncer API';
 	// Uses the link to this tutorial as an example
 	// Replace with your own docs links when building your own nodes
 	documentationUrl = 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
