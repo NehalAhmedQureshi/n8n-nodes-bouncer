@@ -5,8 +5,8 @@ import {
 } from 'n8n-workflow';
 
 export class TheNeverBounceApi implements ICredentialType {
-	name = 'theNeverBounceApi';
-	displayName = 'The Never Bounce API';
+	name = 'theNeverBounceApiToken';
+displayName = 'NeverBounce API';
 	// Uses the link to this tutorial as an example
 	// Replace with your own docs links when building your own nodes
 	documentationUrl = 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
