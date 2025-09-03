@@ -126,7 +126,7 @@ For major changes, please open an issue first to discuss what you would like to 
 ## Author
 
 - [Neehal Ahmed Qureshi](https://github.com/NeehalAhmedQureshi)
-- [Your Website or Contact Info]
+- *Email Address*:m.nehalq125@gmail.com
 
 ---
 
