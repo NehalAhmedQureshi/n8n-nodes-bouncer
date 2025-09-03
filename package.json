@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-bouncer",
-  "version": "0.1.2",
+  "name": "@NehalAhmedQureshi/n8n-nodes-bouncer",
+  "version": "0.1.3",
   "description": "Use this to integrate the never bounce email validator.",
   "keywords": [
     "n8n-community-node-package"
@@ -8,7 +8,7 @@
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "NeehalAhmedQureshi",
+    "name": "NehalAhmedQureshi",
     "email": "m.nehalq125@gmail.com"
   },
   "repository": {
@@ -20,7 +20,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "npx rimraf dist && tsc && gulp build:icons",git@github.com:NehalAhmedQureshi/n8n-nodes-bouncer.git
+    "build": "npx rimraf dist && tsc && gulp build:icons",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
