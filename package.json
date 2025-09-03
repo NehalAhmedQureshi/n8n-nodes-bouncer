@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-bouncer",
+"name": "@NehalAhmedQureshi/n8n-nodes-bouncer",
   "version": "0.1.7",
   "description": "Use this to integrate the never bounce email validator.",
   "keywords": [
@@ -20,13 +20,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "npx rimraf dist && tsc && gulp build:icons",
-    "dev": "tsc --watch",
-    "format": "prettier nodes credentials --write",
-    "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
-  },
+  "build": "npx rimraf dist && tsc && gulp build:icons",
+  "dev": "tsc --watch",
+  "format": "prettier nodes credentials --write",
+  "lint": "eslint nodes credentials",
+  "lintfix": "eslint nodes credentials --fix",
+  "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials"
+},
   "files": [
     "dist"
   ],
