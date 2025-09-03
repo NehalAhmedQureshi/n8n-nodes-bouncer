@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bouncer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Use this to integrate the never bounce email validator.",
   "keywords": [
     "n8n-community-node-package"
