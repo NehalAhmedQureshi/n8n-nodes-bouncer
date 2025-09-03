@@ -17,7 +17,7 @@ export class TheNeverBounce implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'TheNeverBounceApi',
+				name: 'theNeverBounceApi',
 				required: true,
 			},
 		],
