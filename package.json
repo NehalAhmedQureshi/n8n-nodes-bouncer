@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bouncer",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Use this to integrate the never bounce email validator.",
   "keywords": [
     "n8n-community-node-package"
@@ -20,7 +20,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "npx rimraf dist && tsc && gulp build:icons",git@github.com:NehalAhmedQureshi/n8n-nodes-bouncer.git
+    "build": "npx rimraf dist && tsc && gulp build:icons",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
@@ -33,12 +33,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/TheNeverBounceApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/TheNeverBounce/TheNeverBounce.node.js"
     ]
   },
   "devDependencies": {
